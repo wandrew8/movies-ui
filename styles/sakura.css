@@ -155,14 +155,16 @@ pre>code {
 /* Tables */
 
 table {
-    text-align: justify;
+    text-align: fixed;
     width: 100%;
     border-collapse: collapse;
 }
 
 td, th {
+    width: 25%;
     padding: 0.5em;
     border-bottom: 1px solid #f1f1f1;
+    text-align: center;
 }
 
 /* Buttons, forms and input */

@@ -138,3 +138,31 @@
     width: 7em;
     margin: 0 1em 0 0;
 }
+
+.stats {
+    font-size: 4rem !important;
+}
+
+.table {
+    margin-bottom: 2rem;
+}
+
+.availability {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.available-false {
+    color: #ff7675;
+}
+
+.available-true {
+    color: #00cec9;
+}
+
+.available-icon {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
