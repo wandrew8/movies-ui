@@ -36,57 +36,93 @@
             </li>
         </ul>
     </header>
-    <main>
+    <main class="movie-page-container">
         <h1>The Social Network</h1>
         <h3>David Fincher ∙ 2010</h3>
-        <table class="pure-table pure-table-bordered table">
-            <thead>
-                <tr>
-                    <th>IMdb Score</th>
-                    <th>Rotten Tomatoes</th>
-                    <th>Age Range</th>
-                    <th>Runtime</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="stats">88%</td>
-                    <td class="stats">7.7</td>
-                    <td class="stats">13+</td>
-                    <td class="stats">120min</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="pure-table pure-table-bordered table">
-            <thead>
-                <tr>
-                    <th>Hulu</th>
-                    <th>Netflix</th>
-                    <th>Prime Video</th>
-                    <th>Disney+</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="stats">
-                        <p class="availability">Not Available</p>
-                        <p class="available-icon"><i class="fas fa-times available-false"></i></p>
-                    </td>
-                    <td class="stats">
-                        <p class="availability">Available</p>
-                        <p class="available-icon"><i class="fas fa-check available-true"></i></p>
-                    </td>
-                    <td class="stats">
-                        <p class="availability">Not Available</p>
-                        <p class="available-icon"><i class="fas fa-times available-false"></i></p>                    
-                    </td>
-                    <td class="stats">
-                        <p class="availability">Not Available</p>
-                        <p class="available-icon"><i class="fas fa-times available-false"></i></p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="star-rating">
+            <h4 class="no-top-margin">User Rating</h4>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <p>4.3 / 5 (243)</p>
+            <p><a href="./reviewForm.html">Rate this movie</a></p>
+        </div>
+        <div class="button-container">
+            <button class="pure-button pure-button-primary rounded"><i class="fas fa-heart"></i> Favorites</button>
+            <button class="pure-button pure-button-primary rounded"><i class="fas fa-plus"></i> Watchlist</button>
+        </div>
+        <hr/>
+        <section>
+            <table class="pure-table pure-table-bordered table">
+                <thead>
+                    <tr>
+                        <th>IMdb Score</th>
+                        <th>Rotten Tomatoes</th>
+                        <th>Age Range</th>
+                        <th>Runtime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stats">88%</td>
+                        <td class="stats">7.7</td>
+                        <td class="stats">13+</td>
+                        <td class="stats">120min</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <table class="pure-table pure-table-bordered table">
+                <thead>
+                    <tr>
+                        <th>Hulu</th>
+                        <th>Netflix</th>
+                        <th>Prime Video</th>
+                        <th>Disney+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="stats">
+                            <p class="availability">Not Available</p>
+                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>
+                        </td>
+                        <td class="stats">
+                            <p class="availability">Available</p>
+                            <p class="available-icon"><i class="fas fa-check available-true"></i></p>
+                        </td>
+                        <td class="stats">
+                            <p class="availability">Not Available</p>
+                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>                    
+                        </td>
+                        <td class="stats">
+                            <p class="availability">Not Available</p>
+                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr/>
+        <section>
+            <h2>User Reviews (3)</h2>
+            <div class="review">
+                <div class="review-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    4 / 5
+                    <p>August 22nd 2020 ∙ Andrew Weiss</p>
+                </div> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt, consectetur sapiente, id quidem aliquid tenetur nulla numquam porro recusandae dicta suscipit. Iure ea dolorem veniam quidem officiis nesciunt expedita.</p>
+            </div>
+            <p><a href="./review.html">View all reviews</a> | <a href="./reviewForm.html">Rate this movie</a></p>
+        </section>
     </main>
 </body>
 </html>
