@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="./styles/sakura.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles//style.css">
+    <title>Movie Finder</title>
+</head>
+<body>
+    <header class="pure-menu pure-menu-horizontal navbar">
+        <ul class="pure-menu-list header">
+            <a href="#" class="pure-menu-heading logo pure-menu-link">🎞️Movie Finder</a>
+            <li class="pure-menu-item">
+                <form class="pure-form">
+                    <select class="searchType" id="search-type">
+                        <option>Title</option>
+                        <option>Director</option>
+                    </select>
+                    <input class="pure-input-rounded searchBar" type="text" placeholder="Search Movies..." />
+                    <button type="submit" class="pure-button pure-button-primary rounded">Submit</button>
+                </form>
+            </li>
+            <li class="pure-menu-item">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list header">
+                        <li class="pure-menu-item">
+                            <a href="./signup.html" class="pure-menu-link">Sign Up</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="./login.html" class="pure-menu-link">Login</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="./collection.html" class="pure-menu-link">Collection</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h1>Movies ∙ Top Results</h1>
+        <hr/>
+        <div class="container">
+            <div class="grid-item">
+                <h3>Filter By Movie Genre</h3>
+                <div class="flex-container">
+                    <a class="pill" href="#">Action</a>
+                    <a class="pill" href="#">Adventure</a>
+                    <a class="pill" href="#">Drama</a>
+                    <a class="pill" href="#">Comedy</a>
+                    <a class="pill" href="#">Horror</a>
+                    <a class="pill" href="#">Animated</a>
+                    <a class="pill" href="#">Thriller</a>
+                    <a class="pill" href="#">Crime</a>
+                    <a class="pill" href="#">History</a>
+                    <a class="pill" href="#">Sci-fi</a>
+                    <a class="pill" href="#">War</a>
+                    <a class="pill" href="#">Biography</a>
+                    <a class="pill" href="#">Western</a>
+                    <a class="pill" href="#">Fantasy</a>
+                    <a class="pill" href="#">Romance</a>
+                </div>
+                <h3>Sort Options</h3>
+                <form class="pure-form sort-options">
+                    <label class="option" for="year">Year<input class="option" type="radio" name="sortType" id="year" /></label>
+                    <label class="option" for="imdb">IMdb Rating<input class="option" type="radio" name="sortType" id="imdb" /></label>
+                    <label class="option" for="tomato">Rotten Tomatoes<input class="option" type="radio" name="sortType" id="tomato" /></label>
+                </form>
+            </div>
+            <div class="grid-item">
+                <h3>Filter By Streaming Service</h3>
+                <div class="flex-container">
+                    <a class="pill" href="#">Hulu</a>
+                    <a class="pill" href="#">Netflix</a>
+                    <a class="pill" href="#">Prime Video</a>
+                    <a class="pill" href="#">Disney+</a>
+                    
+                </div>
+                <h3>Filter By Age</h3>
+                <div class="flex-container">
+                    <a class="pill" href="#">7+</a>
+                    <a class="pill" href="#">13+</a>
+                    <a class="pill" href="#">18+</a>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <section class="movie-container">
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+            <div class="movie-card">
+                <h2>The Social Network</h2>
+                <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                <div class="flex-container">
+                    <a class="pill" href="#">Netflix</a>
+                </div>
+                <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
