@@ -29,32 +29,32 @@
                         <li class="pure-menu-item">
                             <a href="./index.html" class="pure-menu-link">Search</a>
                         </li>
+                        <li class="pure-menu-item">
+                            <a href="./collection.html" class="pure-menu-link">Collection</a>
+                        </li>
                     </ul>
                 </div>
             </li>
         </ul>
     </header>
-    <main class="form-container">
-        <h1>Create an Account</h1>
-        <form class="pure-form pure-form-aligned">
+    <main class="review-form-container">
+        <h1 class="center">Movie Review Form</h1>
+        <form class="pure-form pure-form-stacked">
             <fieldset>
-                <div class="pure-control-group">
-                    <label for="rating">First Name</label>
-                    <select type="text" id="rating" name="rating" placeholder="First Name">
-                        <option value="0">Add Star Rating</option>
-                        <option value="1">1 Star</option>
-                        <option value="2">2 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="5">5 Stars</option>
-                    </select>
-                </div>
-                <div class="pure-control-group">
-                    <label for="review">Last Name</label>
-                    <textarea type="text" id="review" name="review" placeholder="Last Name"></textarea>
-                </div>
-                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                <hr class="add-margin"/>
+                <label for="rating">Star Rating</label>
+                <select type="text" id="rating" name="rating" placeholder="Star Rating">
+                    <option value="0">Add Star Rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+                <label for="review">Review</label>
+                <textarea type="text" id="review" name="review" placeholder="Write a review of the movie..."></textarea>
             </fieldset>
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
         </form>
     </main>
 </body>

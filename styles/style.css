@@ -50,8 +50,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 2rem;
-    padding: 0rem 5rem;
-    max-width: 900px;
+    padding: 0rem 2rem;
     margin: 0 auto;
     margin-bottom: 2rem;
     opacity: 1;
@@ -95,9 +94,9 @@
 
 .movie-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
-    padding: 2rem 0rem 5rem 0rem;
+    padding: 2rem 2rem 5rem 2rem;
 }
 
 .movie-card {
@@ -141,7 +140,13 @@
 
 .form-container {
     text-align: center;
-    padding: 5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 3rem;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .pure-form-aligned .pure-control-group label {
@@ -160,6 +165,10 @@
 
 .checked {
     color: #2c8898;
+}
+
+.title {
+    font-size: 4rem;
 }
 
 .table {
@@ -238,6 +247,11 @@
     padding: 2rem;
 }
 
+.review-subtitle {
+    color: #777;
+    font-size: 1.5rem;
+}
+
 .review:nth-child( odd) {
     background-color: #ddd;
 }
@@ -248,10 +262,31 @@
     margin-bottom: 5rem;
 }
 
+.review-form-container {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 3rem;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ------- UTILITY STYLES -------- */
+
 .no-margin {
     margin-bottom: 0rem;
 }
 
 .no-top-margin {
     margin-top: 0rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.add-margin {
+    margin-bottom: 2rem !important;
 }
