@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="./styles/sakura.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles//style.css">
-    <title>Movie Finder</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/sakura.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Movie Finder</title>
+    </head>
 <body>
     <header class="pure-menu pure-menu-horizontal navbar">
         <ul class="pure-menu-list header">
@@ -34,6 +35,24 @@
                     </ul>
                 </div>
             </li>
+            <li class="pure-menu-item">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list header">
+                        <li class="pure-menu-item">
+                            <a href="/login/signup" class="pure-menu-link">Sign Up</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="/login" class="pure-menu-link">Login</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="/movies" class="pure-menu-link">Search</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="/saved" class="pure-menu-link">Collection</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </header>
     <main class="movie-page-container">
@@ -49,10 +68,12 @@
             <p>4.3 / 5 (243)</p>
             <p><a href="./reviewForm.html">Rate this movie</a></p>
         </div>
-        <div class="button-container">
-            <button class="pure-button pure-button-primary rounded"><i class="fas fa-heart"></i> Favorites</button>
-            <button class="pure-button pure-button-primary rounded"><i class="fas fa-plus"></i> Watchlist</button>
-        </div>
+        <form action="">
+            <div class="button-container">
+                <button class="pure-button pure-button-primary rounded"><i class="fas fa-heart"></i> Favorites</button>
+                <button class="pure-button pure-button-primary rounded"><i class="fas fa-plus"></i> Watchlist</button>
+            </div>
+        </form>
         <hr/>
         <section>
             <table class="pure-table pure-table-bordered table">

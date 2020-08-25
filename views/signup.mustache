@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="./styles/sakura.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles//style.css">
-    <title>Sign Up</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/sakura.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Movie Finder</title>
+    </head>
 <body>
     <header class="pure-menu pure-menu-horizontal navbar">
         <ul class="pure-menu-list header">
@@ -21,13 +22,13 @@
                 <div class="pure-menu pure-menu-horizontal">
                     <ul class="pure-menu-list header">
                         <li class="pure-menu-item">
-                            <a href="./signup.html" class="pure-menu-link">Sign Up</a>
+                            <a href="/login/signup" class="pure-menu-link">Sign Up</a>
                         </li>
                         <li class="pure-menu-item">
-                            <a href="./login.html" class="pure-menu-link">Login</a>
+                            <a href="/login" class="pure-menu-link">Login</a>
                         </li>
                         <li class="pure-menu-item">
-                            <a href="./index.html" class="pure-menu-link">Search</a>
+                            <a href="/movies" class="pure-menu-link">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -41,19 +42,19 @@
                 <hr class="add-margin"/>
                 <div class="pure-control-group">
                     <label for="aligned-first">First Name</label>
-                    <input type="text" id="aligned-first" placeholder="First Name" />
+                    <input name="firstName" type="text" id="aligned-first" placeholder="First Name" />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-last">Last Name</label>
-                    <input type="text" id="aligned-last" placeholder="Last Name" />
+                    <input name="lastName" type="text" id="aligned-last" placeholder="Last Name" />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-email">Email Address</label>
-                    <input type="email" id="aligned-email" placeholder="Email Address" />
+                    <input name="email" type="email" id="aligned-email" placeholder="Email Address" />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-password">Password</label>
-                    <input type="password" id="aligned-password" placeholder="Password" />
+                    <input name="password" type="password" id="aligned-password" placeholder="Password" />
                 </div>
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>
             </fieldset>
