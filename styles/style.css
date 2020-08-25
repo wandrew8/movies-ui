@@ -55,6 +55,7 @@
     margin-bottom: 2rem;
     opacity: 1;
     transition: 300ms ease-in-out;
+    position: relative;
 }
 
 .hideOptions {
@@ -68,13 +69,51 @@
     cursor: pointer;
 }
 
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 20px 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 20px 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.sort-grid {
+    display: grid;
+    grid-template-columns: 140px 185px 215px;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.age-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 20px 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
 .pill {
-    border: solid 1px #2c8898;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
+    border: solid 1px #2c8898 !important;
+    margin: 0.5rem 1rem !important;
+    margin-bottom: 0rem !important;
+    border-radius: 0.5rem !important;
     transition: 300ms ease-in-out;
     display: inline-block;
+}
+
+.position-absolute {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+label {
+    margin-bottom: 0 !important;
 }
 
 .pill:hover {

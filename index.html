@@ -46,184 +46,137 @@
         <hr/>
         <div class="search-options hideOptions">
             <div class="grid-item">
-                <h3>Filter By Movie Genre</h3>
-                <div class="flex-container">
-                    <a class="pill" href="#">Action</a>
-                    <a class="pill" href="#">Adventure</a>
-                    <a class="pill" href="#">Drama</a>
-                    <a class="pill" href="#">Comedy</a>
-                    <a class="pill" href="#">Horror</a>
-                    <a class="pill" href="#">Animated</a>
-                    <a class="pill" href="#">Thriller</a>
-                    <a class="pill" href="#">Crime</a>
-                    <a class="pill" href="#">History</a>
-                    <a class="pill" href="#">Sci-fi</a>
-                    <a class="pill" href="#">War</a>
-                    <a class="pill" href="#">Biography</a>
-                    <a class="pill" href="#">Western</a>
-                    <a class="pill" href="#">Fantasy</a>
-                    <a class="pill" href="#">Romance</a>
-                </div>
-                <h3>Sort Options</h3>
-                <form class="pure-form sort-options">
-                    <label class="option" for="year">Year<input class="option" type="radio" name="sortType" id="year" /></label>
-                    <label class="option" for="imdb">IMdb Rating<input class="option" type="radio" name="sortType" id="imdb" /></label>
-                    <label class="option" for="tomato">Rotten Tomatoes<input class="option" type="radio" name="sortType" id="tomato" /></label>
+                <form action="">
+
+                    <div class="flex-container">
+                        <fieldset>
+                            <legend>Filter By Movie Genre</legend>
+                            <div class="input-grid">
+                                <input type="checkbox" name="genre" id="action" value="action" class="pill"><label for="action">Action</label>
+                                <input type="checkbox" name="genre" id="adventure" value="adventure" class="pill"><label for="adventure">Adventure</label>
+                                <input type="checkbox" name="genre" id="drama" value="drama" class="pill"><label for="drama">Drama</label>
+                                <input type="checkbox" name="genre" id="comedy" value="comedy" class="pill"><label for="comedy">Comedy</label>
+                                <input type="checkbox" name="genre" id="horror" value="horror" class="pill"><label for="horror">Horror</label>
+                                <input type="checkbox" name="genre" id="animated" value="animated" class="pill"><label for="animated">Animated</label>
+                                <input type="checkbox" name="genre" id="thriller" value="thriller" class="pill"><label for="thriller">Thriller</label>
+                                <input type="checkbox" name="genre" id="crime" value="crime" class="pill"><label for="crime">Crime</label>
+                                <input type="checkbox" name="genre" id="history" value="history" class="pill"><label for="history">History</label>
+                                <input type="checkbox" name="genre" id="sci-fi" value="sci-fi" class="pill"><label for="sci-fi">Sci-fi</label>
+                                <input type="checkbox" name="genre" id="war" value="war" class="pill"><label for="war">War</label>
+                                <input type="checkbox" name="genre" id="biography" value="biography" class="pill"><label for="biography">Biography</label>
+                                <input type="checkbox" name="genre" id="western" value="western" class="pill"><label for="western">Western</label>
+                                <input type="checkbox" name="genre" id="fantasy" value="fantasy" class="pill"><label for="fantasy">Fantasy</label>
+                                <input type="checkbox" name="genre" id="romance" value="romance" class="pill"><label for="romance">Romance</label>
+                            </div>
+                        </fieldset>
+                        </div>
+                        <div class="pure-form sort-options">
+                            <fieldset>
+                                <legend>Sort Options</legend>
+                                <div class="sort-grid">
+                                    <label class="option" for="year">Year<input class="option" type="radio" name="sortType" id="year" /></label>
+                                    <label class="option" for="imdb">IMdb Rating<input class="option" type="radio" name="sortType" id="imdb" /></label>
+                                    <label class="option" for="tomato">Rotten Tomatoes<input class="option" type="radio" name="sortType" id="tomato" /></label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <fieldset>
+                            <legend>Filter By Streaming Service</legend>
+                            <div class="flex-container">
+                                <div class="service-grid">
+                                    <input type="checkbox" name="service" id="hulu" value="hulu" class="pill"><label for="hulu">Hulu</label>
+                                    <input type="checkbox" name="service" id="netflix" value="netflix" class="pill"><label for="netflix">Netflix</label>
+                                    <input type="checkbox" name="service" id="prime" value="prime" class="pill"><label for="prime">Prime Video</label>
+                                    <input type="checkbox" name="service" id="disney" value="disney" class="pill"><label for="disney">Disney+</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Filter By Age</legend>
+                            <div class="flex-container">
+                                <div class="age-grid">
+                                    <input type="checkbox" name="age" id="7+" value="7+" class="pill"><label for="7+">7+</label>
+                                    <input type="checkbox" name="age" id="13+" value="13+" class="pill"><label for="13+">13+</label>
+                                    <input type="checkbox" name="age" id="18+" value="18+" class="pill"><label for="18+">18+</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="pure-button pure-button-primary rounded position-absolute">Filter</button>
+                    </div>
                 </form>
             </div>
-            <div class="grid-item">
-                <h3>Filter By Streaming Service</h3>
-                <div class="flex-container">
-                    <a class="pill" href="#">Hulu</a>
-                    <a class="pill" href="#">Netflix</a>
-                    <a class="pill" href="#">Prime Video</a>
-                    <a class="pill" href="#">Disney+</a>
-                    
+            <hr/>
+            <section class="movie-container">
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
                 </div>
-                <h3>Filter By Age</h3>
-                <div class="flex-container">
-                    <a class="pill" href="#">7+</a>
-                    <a class="pill" href="#">13+</a>
-                    <a class="pill" href="#">18+</a>
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="./movie.html">
+                        <h2>The Social Network</h2>
+                        <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
+                        <div class="flex-container">
+                            <p>Available on Netflix</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <div class="center">
+                <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <section class="movie-container">
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-            <div class="movie-card">
-                <a href="./movie.html">
-                    <h2>The Social Network</h2>
-                    <p class="movie-card-subtitle">David Fincher ∙ 2010 ∙ 13+</p>
-                    <div class="flex-container">
-                        <a class="pill" href="#">Netflix</a>
-                    </div>
-                    <p class="movie-card-icons">Add to Favorites<i class="far fa-heart icon"></i> Add to watchlist<i class="far fa-bookmark icon"></i></p>
-                </a>
-            </div>
-        </section>
-        <div class="center">
-            <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
-            </div>
-          </div>
-    </main>
+        </main>
     <script src="./app.js"></script>
 </body>
 </html>
