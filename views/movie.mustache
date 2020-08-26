@@ -21,24 +21,6 @@
                 <div class="pure-menu pure-menu-horizontal">
                     <ul class="pure-menu-list header">
                         <li class="pure-menu-item">
-                            <a href="./signup.html" class="pure-menu-link">Sign Up</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./login.html" class="pure-menu-link">Login</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./index.html" class="pure-menu-link">Search</a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./collection.html" class="pure-menu-link">Collection</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="pure-menu-item">
-                <div class="pure-menu pure-menu-horizontal">
-                    <ul class="pure-menu-list header">
-                        <li class="pure-menu-item">
                             <a href="/login/signup" class="pure-menu-link">Sign Up</a>
                         </li>
                         <li class="pure-menu-item">
@@ -56,22 +38,26 @@
         </ul>
     </header>
     <main class="movie-page-container">
-        <h1 class="title">The Social Network</h1>
-        <h3>David Fincher ∙ 2010</h3>
+        {{#movieData}}
+        <h1 class="title">{{movieData.Title}}</h1>
+        <h3>{{movieData.Directors}} ∙ {{movieData.Year}}</h3>
+        {{/movieData}}
         <div class="star-rating">
-            <h4 class="no-top-margin">User Rating</h4>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <p>4.3 / 5 (243)</p>
-            <p><a href="./reviewForm.html">Rate this movie</a></p>
+            <h4 class="no-top-margin">Average User Rating</h4>
+            {{#userStarRating}}
+                {{#.}}<span class="fa fa-star checked"></span>{{/.}}{{^.}}<span class="fa fa-star"></span>{{/.}}
+            {{/userStarRating}}
+            <p>{{avgRating}} / 5 ({{numReviews}})</p>
+            {{#movieData}}
+                <p><a href="/reviews/{{ID}}/add-review">Rate this movie</a></p>
+            {{/movieData}}
         </div>
         <form action="">
             <div class="button-container">
-                <button class="pure-button pure-button-primary rounded"><i class="fas fa-heart"></i> Favorites</button>
-                <button class="pure-button pure-button-primary rounded"><i class="fas fa-plus"></i> Watchlist</button>
+                {{#movieData}}
+                    <button data-movieid="{{ID}}" id="favorites" class="pure-button pure-button-primary rounded"><i class="fas fa-heart"></i> Favorites</button>
+                    <button data-movieid="{{ID}}" id="watchList" class="pure-button pure-button-primary rounded"><i class="fas fa-plus"></i> Watchlist</button>
+                {{/movieData}}
             </div>
         </form>
         <hr/>
@@ -86,12 +72,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{#movieData}}
                     <tr>
-                        <td class="stats">88%</td>
-                        <td class="stats">7.7</td>
-                        <td class="stats">13+</td>
-                        <td class="stats">120min</td>
+                        <td class="stats">{{IMDb}}</td>
+                        <td class="stats">{{Rotten Tomatoes}}</td>
+                        <td class="stats">{{Age}}</td>
+                        <td class="stats">{{Runtime}}</td>
                     </tr>
+                    {{/movieData}}
                 </tbody>
             </table>
         </section>
@@ -107,43 +95,67 @@
                 </thead>
                 <tbody>
                     <tr>
+                        {{#movieData}}
                         <td class="stats">
-                            <p class="availability">Not Available</p>
-                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>
+                            {{#Hulu}}<p class="availability">Available</p>{{/Hulu}}
+                            {{^Hulu}}<p class="availability">Not Available</p>{{/Hulu}}
+                            {{#Hulu}}<p class="available-icon"><i class="fas fa-check available-true"></i></p>{{/Hulu}}
+                            {{^Hulu}}<p class="available-icon"><i class="fas fa-times available-false"></i></p>{{/Hulu}}
                         </td>
                         <td class="stats">
-                            <p class="availability">Available</p>
-                            <p class="available-icon"><i class="fas fa-check available-true"></i></p>
+                            {{#Netflix}}<p class="availability">Available</p>{{/Netflix}}
+                            {{^Netflix}}<p class="availability">Not Available</p>{{/Netflix}}
+                            {{#Netflix}}<p class="available-icon"><i class="fas fa-check available-true"></i></p>{{/Netflix}}
+                            {{^Netflix}}<p class="available-icon"><i class="fas fa-times available-false"></i></p>{{/Netflix}}
                         </td>
                         <td class="stats">
-                            <p class="availability">Not Available</p>
-                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>                    
+                            {{#Prime Video}}<p class="availability">Available</p>{{/Prime Video}}
+                            {{^Prime Video}}<p class="availability">Not Available</p>{{/Prime Video}}
+                            {{#Prime Video}}<p class="available-icon"><i class="fas fa-check available-true"></i></p>{{/Prime Video}}
+                            {{^Prime Video}}<p class="available-icon"><i class="fas fa-times available-false"></i></p>{{/Prime Video}}
                         </td>
                         <td class="stats">
-                            <p class="availability">Not Available</p>
-                            <p class="available-icon"><i class="fas fa-times available-false"></i></p>
+                            {{#Disney+}}<p class="availability">Available</p>{{/Disney+}}
+                            {{^Disney+}}<p class="availability">Not Available</p>{{/Disney+}}
+                            {{#Disney+}}<p class="available-icon"><i class="fas fa-check available-true"></i></p>{{/Disney+}}
+                            {{^Disney+}}<p class="available-icon"><i class="fas fa-times available-false"></i></p>{{/Disney+}}
                         </td>
+                        {{/movieData}}
                     </tr>
                 </tbody>
             </table>
         </section>
         <hr/>
         <section>
-            <h2>User Reviews (3)</h2>
+            <h2>User Reviews ({{ numReviews }})</h2>
             <div class="review">
+                {{#firstReview}}
                 <div class="review-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    4 / 5
-                    <p class="review-subtitle">August 22nd 2020 ∙ Andrew Weiss</p>
+                    {{#firstReviewStarRating}}
+                        {{#.}}<span class="fa fa-star checked"></span>{{/.}}{{^.}}<span class="fa fa-star"></span>{{/.}}
+                    {{/firstReviewStarRating}}
+                    {{rating}} / 5
+                    <p class="review-subtitle">{{createdAt}} ∙ {{userId.firstName}} {{userId.lastName}}</p>
                 </div> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt, consectetur sapiente, id quidem aliquid tenetur nulla numquam porro recusandae dicta suscipit. Iure ea dolorem veniam quidem officiis nesciunt expedita.</p>
+                <p>{{review}}</p>
+                {{/firstReview}}
+                {{^firstReview}}
+                <div class="review-rating">
+                    No Reviews
+                </div> 
+                {{/firstReview}}
             </div>
-            <p><a href="./review.html">View all reviews</a> | <a href="./reviewForm.html">Rate this movie</a></p>
+            {{#movieData}}
+                {{#firstReview}}
+                <p><a href="/reviews/{{ID}}">View all reviews</a> | <a href="/reviews/{{ID}}/add-review">Rate this movie</a></p>
+                {{/firstReview}}
+                {{^firstReview}}
+                <p><a href="/reviews/{{ID}}/add-review">Rate this movie</a></p>
+                {{/firstReview}}
+            {{/movieData}}
+            
         </section>
     </main>
 </body>
+<script src="/javaScript/app2.js"></script>
 </html>

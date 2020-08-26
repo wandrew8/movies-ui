@@ -291,6 +291,15 @@ label {
     font-size: 1.5rem;
 }
 
+.review-stars {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.review-container {
+    position: relative;
+}
+
 .review:nth-child( odd) {
     background-color: #ddd;
 }

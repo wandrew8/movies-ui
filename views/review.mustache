@@ -38,48 +38,30 @@
             </li>
         </ul>
     </header>
-    <main>
+    <main class="review-container">
+        {{#movieData}}
         <h1>User Reviews</h1>
-        <h2>The Social Network</h2>
-        <p>3 reviews ∙ <a href="./reviewForm.html">Rate this movie</a></p>
+        <h2>{{Title}}</h2>
+        <p>{{numReviews}} reviews ∙ <a href="/reviews/{{ID}}/add-review">Rate this movie</a></p>
+        {{/movieData}}
+        <div class="star-rating">
+            <h4 class="no-top-margin">Average User Rating</h4>
+            {{#userStarRating}}
+                {{#.}}<span class="fa fa-star checked"></span>{{/.}}{{^.}}<span class="fa fa-star"></span>{{/.}}
+            {{/userStarRating}}
+            <p>{{avgRating}} / 5 ({{numReviews}})</p>
+        </div>
         <hr class="no-margin"/>
         <ul class="review-list">
+            {{#reviews}}
             <li class="review">
                 <div class="review-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    4 / 5
-                    <p class="review-subtitle">August 22nd 2020 ∙ Andrew Weiss</p>
+                    <h3 class="review-stars"><span class="fa fa-star checked"></span> {{rating}} / 5</h3>
+                    <p class="review-subtitle">{{createdAt}} ∙ {{userId.firstName}} {{userId.lastName}}</p>
                 </div> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt, consectetur sapiente, id quidem aliquid tenetur nulla numquam porro recusandae dicta suscipit. Iure ea dolorem veniam quidem officiis nesciunt expedita.</p>
+                <p>{{review}}</p>
             </li>
-            <li class="review">
-                <div class="review-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    4 / 5
-                    <p class="review-subtitle">August 22nd 2020 ∙ Andrew Weiss</p>
-                </div> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt, consectetur sapiente, id quidem aliquid tenetur nulla numquam porro recusandae dicta suscipit. Iure ea dolorem veniam quidem officiis nesciunt expedita.</p>
-            </li>
-            <li class="review">
-                <div class="review-rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    4 / 5
-                    <p class="review-subtitle">August 22nd 2020 ∙ Andrew Weiss</p>
-                </div> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt, consectetur sapiente, id quidem aliquid tenetur nulla numquam porro recusandae dicta suscipit. Iure ea dolorem veniam quidem officiis nesciunt expedita.</p>
-            </li>
+            {{/reviews}}
         </ul>
         
     </main>
