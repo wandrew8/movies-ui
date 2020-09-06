@@ -168,12 +168,20 @@ router.get("/movies", (req, res, next) => {
 
 router.get("/movies/:id", (req, res, next) => {
     res.render("movie", { 
+        // Single movie object from database
         "movieData": movieData, 
+        // Average rating toFixed(1)
         "avgRating": avgRating, 
+        // An array of review objects
         "reviews": reviews, 
+        // The length of reviews array (integer)
         "numReviews": reviews.length, 
+        // The first item from the reviews array
         "firstReview": reviews[0], 
+        // Boolean array with length of 5 for the first review
+        // 3.2 = [true, true, true, false, false]
         "firstReviewStarRating": convertStarRating(reviews[0].rating), 
+        // Boolean array for average rating
         "userStarRating": convertStarRating(avgRating) 
     })
 });
