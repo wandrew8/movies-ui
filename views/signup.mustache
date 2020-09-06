@@ -14,7 +14,7 @@
 <body>
     <header class="pure-menu pure-menu-horizontal navbar">
         <ul class="pure-menu-list header">
-            <a href="./index.html" class="pure-menu-heading logo pure-menu-link">🎞️Movie Finder</a>
+            <a href="/" class="pure-menu-heading logo pure-menu-link">🎞️Movie Finder</a>
             <li class="pure-menu-item">
                 
             </li>
@@ -28,7 +28,7 @@
                             <a href="/login" class="pure-menu-link">Login</a>
                         </li>
                         <li class="pure-menu-item">
-                            <a href="/movies" class="pure-menu-link">Search</a>
+                            <a href="/" class="pure-menu-link">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -37,27 +37,25 @@
     </header>
     <main class="form-container">
         <h1>Create an Account</h1>
-        <form class="pure-form pure-form-aligned">
-            <fieldset>
+        <form action="/login/signup" method="post" class="pure-form pure-form-aligned">
                 <hr class="add-margin"/>
                 <div class="pure-control-group">
                     <label for="aligned-first">First Name</label>
-                    <input name="firstName" type="text" id="aligned-first" placeholder="First Name" />
+                    <input name="firstName" type="text" id="aligned-first" placeholder="First Name" required />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-last">Last Name</label>
-                    <input name="lastName" type="text" id="aligned-last" placeholder="Last Name" />
+                    <input name="lastName" type="text" id="aligned-last" placeholder="Last Name" required />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-email">Email Address</label>
-                    <input name="email" type="email" id="aligned-email" placeholder="Email Address" />
+                    <input name="email" type="email" id="aligned-email" placeholder="Email Address" required />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-password">Password</label>
-                    <input name="password" type="password" id="aligned-password" placeholder="Password" />
+                    <input name="password" type="password" id="aligned-password" placeholder="Password" required />
                 </div>
-                <button type="submit" class="pure-button pure-button-primary">Submit</button>
-            </fieldset>
+                <input type="submit" value="Submit" class="pure-button pure-button-primary">
         </form>
     </main>
 </body>

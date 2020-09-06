@@ -14,7 +14,7 @@
 <body>
     <header class="pure-menu pure-menu-horizontal navbar">
         <ul class="pure-menu-list header">
-            <a href="./index.html" class="pure-menu-heading logo pure-menu-link">🎞️Movie Finder</a>
+            <a href="/" class="pure-menu-heading logo pure-menu-link">🎞️Movie Finder</a>
             <li class="pure-menu-item">
                 
             </li>
@@ -28,7 +28,7 @@
                             <a href="/login" class="pure-menu-link">Login</a>
                         </li>
                         <li class="pure-menu-item">
-                            <a href="/movies" class="pure-menu-link">Search</a>
+                            <a href="/" class="pure-menu-link">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -37,16 +37,16 @@
     </header>
     <main class="form-container">
         <h1>Login to Your Account</h1>
-        <form class="pure-form pure-form-aligned">
+        <form action="/login" method="POST" class="pure-form pure-form-aligned">
             <hr class="add-margin"/>
             <fieldset>
                 <div class="pure-control-group">
                     <label for="aligned-email">Email Address</label>
-                    <input type="email" name="email" id="aligned-email" placeholder="Email Address" />
+                    <input type="email" name="email" id="aligned-email" placeholder="Email Address" required />
                 </div>
                 <div class="pure-control-group">
                     <label for="aligned-password">Password</label>
-                    <input type="password" name="password" id="aligned-password" placeholder="Password" />
+                    <input type="password" name="password" id="aligned-password" placeholder="Password" required />
                 </div>
                 <button type="submit" class="pure-button pure-button-primary align-left">Submit</button>
             </fieldset>

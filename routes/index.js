@@ -160,6 +160,7 @@ router.get("/login/signup", (req, res, next) => {
 });
 
 router.get("/movies", (req, res, next) => {
+    console.log(req.query);
     res.render("index", { 
         "movieArray": movieArray 
     });
@@ -188,7 +189,9 @@ router.get("/reviews/:movieId", (req, res, next) => {
 });
 
 router.get("/reviews/:movieId/add-review", (req, res, next) => {
-    res.render("reviewForm")
+    res.render("reviewForm", {
+        "movieData": movieData
+    })
 });
 
 
